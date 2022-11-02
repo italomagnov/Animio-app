@@ -20,18 +20,18 @@ const InputText = styled.input`
     padding: 24px;
     background-color: ${primaryColor};
     color: #f2f2f2;
-    font-size: 24px;
+    font-size: 18px;
     border: none;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 
-export const Input = ({label, placeholder}) => {
+export const Input = ({label, placeholder, required}) => {
     return(
         <InputField>
             <LabelText>{label}</LabelText>
-            <InputText type="text" placeholder={placeholder}/>
+            <InputText type="text" placeholder={placeholder} required={required}/>
         </InputField>
     )
 }

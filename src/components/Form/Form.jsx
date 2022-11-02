@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ButtonCreate } from "../ButtonCreate/ButtonCreate";
 import { Input } from "../Input/Input";
+import { ListaDias, ListaGeneros } from "../ListaSuspensa/ListaSuspensa";
 import { Portrait } from "../Portrait/Portrait";
 import { secundaryColor } from "../UI/Variaveis";
 
@@ -12,6 +13,7 @@ const SectionForm = styled.section`
 `;
 
 const FormStyle = styled.form`
+  max-width: 1024px;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -37,7 +39,7 @@ const ContentInput = styled.div`
   width: 100%;
 `
 
-export const Form = () => {
+export const Form = (props) => {
   return (
     <SectionForm>
       <FormStyle>
@@ -45,16 +47,24 @@ export const Form = () => {
         <InputForm>
           <ContentInput>
             <Input 
-              label="Nome do Anime" 
+              required={true}
+              label="Nome" 
               placeholder="Digite o nome do anime" 
             />
             <Input
-              label="Imagem do Anime"
+              required={true}
+              label="Imagem"
               placeholder="Insira o caminho da imagem"
             />
-            <Input
-              label="Gênero do Anime"
-              placeholder="Selecione o gênero do anime"
+            <ListaDias 
+              required={true}
+              label='Dias'
+              dias={props.dias}
+            />
+            <ListaGeneros 
+              required={true}
+              label='Gêneros'
+              genre={props.genre}
             />
           </ContentInput>
           <Portrait />  
