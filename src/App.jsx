@@ -1,8 +1,15 @@
-function App() {
+import { Banner } from "./components/Banner";
+import { Form } from "./components/Form/Form";
+import { GlobalStyle } from "./GlobalStyle";
 
+function App() {
   return (
-    <h1>Hello World</h1>
-  )
+    <>
+      <GlobalStyle />
+      <Banner />
+      <Form />
+    </>
+  );
 }
 
-export default App
+export default App;
