@@ -64,7 +64,7 @@ export const Form = (props) => {
             <ListaGeneros 
               required={true}
               label='Gêneros'
-              genre={props.genre}
+              genre={props.genero}
             />
           </ContentInput>
           <Portrait />  

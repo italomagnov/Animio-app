@@ -9,19 +9,19 @@ function App() {
   const generos = [
     {
       nome: 'Shounen',
-      corGenero: {shoonenCard},
+      corGenero: shoonenCard,
     },
     {
       nome: 'Isekai',
-      corGenero: {isekaiCard},
+      corGenero: isekaiCard,
     },
     {
       nome: 'Seinen',
-      corGenero: {seinenCard},
+      corGenero: seinenCard,
     },
     {
       nome: 'Terror',
-      corGenero: {terrorCard},
+      corGenero: terrorCard,
     },
   ]
 
@@ -62,11 +62,15 @@ function App() {
       <Banner />
       <Form 
         dias={dias.map((item) => item.dia)}
-        genre={generos.map((item) => item.nome)}
+        genero={generos.map((item) => item.nome)}
       />
-      <Genero 
-        backgroundColor = {generos.corGenero}
-      />
+      {generos.map(genero => 
+        <Genero 
+          key={genero.nome}
+          nome={genero.nome}
+          corFundo={genero.corGenero}
+        />  
+      )}
     </>
   );
 }

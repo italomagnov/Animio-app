@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Card } from "../Card/Card";
 import { elementsColor, secundaryColor } from "../UI/Variaveis";
 
 const GeneroStyle = styled.section`
-  display: flex;
+  /* display: flex;
+  text-align: center;
+  justify-content: center; */
   text-align: center;
   padding: 0 12px 64px;
-  justify-content: center;
+  margin-bottom: 64px;
 `;
 
 const HeaderTitle = styled.div`
@@ -24,16 +27,31 @@ const HeaderTitle = styled.div`
   border-radius: 50px 0px;
 `;
 
-export const Genero = (props) => {
+const Cards = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`
+
+export const Genero = ({nome, corFundo}) => {
+    
   const corBackground = {
-    backgroundColor: props.backgroundColor,
+    backgroundColor: corFundo,
+  };
+  
+  const textColor = {
+    color: corFundo,
   };
 
   return (
-    <GeneroStyle style={{ backgroundColor: "red" }}>
-      <HeaderTitle>
-        <h3>Genero</h3>
-      </HeaderTitle>
-    </GeneroStyle>
+      <GeneroStyle style={corBackground}>
+        <HeaderTitle>
+          <h3 style={textColor}>{nome}</h3>
+        </HeaderTitle>
+        <Cards>
+          <Card />
+        </Cards>
+      </GeneroStyle>
   );
 };
