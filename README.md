@@ -10,7 +10,7 @@ Esse projeto tem o objetivo de colocar em prática o que foi aprendido nos curso
 
 ![formulario do app](https://user-images.githubusercontent.com/58237887/199409109-4d7a274a-f0d0-4f67-a354-56bd9cb1f779.png)
 ![seção dos gêneros](https://user-images.githubusercontent.com/58237887/199409599-42e241b5-2612-48cb-93a0-f4835d050b65.png)
-![cards nos gêneros correspondentes](https://user-images.githubusercontent.com/58237887/199412312-a50e84cf-99e0-47fb-a760-db5be4e2fd5f.png)
+![cards nos gêneros correspondentes](https://user-images.githubusercontent.com/58237887/200067021-15996f10-9b25-4353-a445-437ff7847604.png)
 
 
 ## 🛠️ Construído com
