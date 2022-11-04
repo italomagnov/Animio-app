@@ -26,12 +26,16 @@ const InputText = styled.input`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
+export const Input = ({label, placeholder, required, alterado, valor}) => {
 
-export const Input = ({label, placeholder, required}) => {
+    const entradaUsuario = (evento) => {
+        alterado(evento.target.value);
+    }
+
     return(
         <InputField>
             <LabelText>{label}</LabelText>
-            <InputText type="text" placeholder={placeholder} required={required}/>
+            <InputText onChange={entradaUsuario} value={valor} type="text" placeholder={placeholder} required={required}/>
         </InputField>
     )
 }

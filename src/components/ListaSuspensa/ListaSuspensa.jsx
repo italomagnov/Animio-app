@@ -26,11 +26,15 @@ const ListaSelect = styled.select`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-export const ListaDias = ({ label, dias }) => {
+export const ListaDias = ({ label, dias, required, valor, alterado }) => {
   return (
     <SelectInput>
       <ListaLabel>{label}</ListaLabel>
-      <ListaSelect name="" id="">
+      <ListaSelect
+        onChange={(evento) => alterado(evento.target.value)}
+        value={valor}
+        required={required}
+      >
         <option value="" key=""></option>
         {dias.map((dia) => (
           <option key={dia}>{dia}</option>
@@ -40,16 +44,18 @@ export const ListaDias = ({ label, dias }) => {
   );
 };
 
-export const ListaGeneros = ({ label, genre }) => {
+export const ListaGeneros = ({ label, genre, required, valor, alterado }) => {
   return (
     <SelectInput>
       <ListaLabel>{label}</ListaLabel>
-      <ListaSelect name="" id="">
+      <ListaSelect
+        onChange={(evento) => alterado(evento.target.value)}
+        required={required}
+        value={valor}
+      >
         <option value="" key=""></option>
         {genre.map((genero) => (
-          <option value="" key={genero}>
-            {genero}
-          </option>
+          <option key={genero}>{genero}</option>
         ))}
       </ListaSelect>
     </SelectInput>

@@ -4,12 +4,13 @@ import { Card } from "../Card/Card";
 import { elementsColor, secundaryColor } from "../UI/Variaveis";
 
 const GeneroStyle = styled.section`
-  /* display: flex;
-  text-align: center;
-  justify-content: center; */
   text-align: center;
   padding: 0 12px 64px;
   margin-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const HeaderTitle = styled.div`
@@ -32,26 +33,35 @@ const Cards = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-`
+  gap: 24px;
+`;
 
-export const Genero = ({nome, corFundo}) => {
-    
+export const Genero = ({ animes, nome, corFundo }) => {
   const corBackground = {
     backgroundColor: corFundo,
   };
-  
+
   const textColor = {
     color: corFundo,
   };
 
   return (
+    animes.length > 0 && (
       <GeneroStyle style={corBackground}>
         <HeaderTitle>
           <h3 style={textColor}>{nome}</h3>
         </HeaderTitle>
         <Cards>
-          <Card />
+          {animes.map((anime) => (
+            <Card
+              nome={anime.nome}
+              imagem={anime.imagem}
+              dia={anime.dia}
+              corTitle={corFundo}
+            />
+          ))}
         </Cards>
       </GeneroStyle>
+    )
   );
 };

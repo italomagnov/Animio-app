@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { elementsColor, primaryColor, secundaryColor } from "../UI/Variaveis";
+import { elementsColor, primaryColor } from "../UI/Variaveis";
 
 const CreateCard = styled.button`
+  align-self: center;
   padding: 20px;
   color: #f2f2f2;
   font-size: 18px;
