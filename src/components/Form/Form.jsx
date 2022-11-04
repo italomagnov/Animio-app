@@ -96,7 +96,6 @@ export const Formulario = (props) => {
               alterado={valor => setGenero(valor)}
             />
           </ContentInput>
-          <Portrait />  
         </InputForm>
         <ButtonCreate />
       </FormStyle>
