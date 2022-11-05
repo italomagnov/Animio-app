@@ -1,7 +1,5 @@
 <h1 align="center"> Animio </h1>
 
-<p align="center"><img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/></p>
-
 Esse projeto tem o objetivo de colocar em prática o que foi aprendido nos cursos de React e Styled-Components na plataforma Alura.
 <p> O Aminio é um app para organizar os animes que você está assistindo por gêneros</p>
 
